@@ -43,8 +43,8 @@
 
 // HtoN and NtoH methods for ull values
 #if (__BYTE_ORDER == __BIG_ENDIAN)
-#define ntohll(val) return (val)
-#define htonll(val) return (val)
+#define ntohll(val) (val)
+#define htonll(val) (val)
 #else
 #define ntohll(val) __bswap_64(val)
 #define htonll(val) __bswap_64(val)
