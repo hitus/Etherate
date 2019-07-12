@@ -397,6 +397,12 @@ void speed_test_full(struct etherate *eth)
     int16_t tx_ret = 0;
     int16_t rx_len = 0;
 
+
+    printf("(vj) Frame size is %" PRId16 " bytes\n", eth->params.f_size_total);
+    printf("(vj) Ack mode is %u\n", eth->params.f_ack);
+    printf("(vj) ACK mode set to ACK every %" PRIu32 " frames\n", eth->params.f_ack_count);
+
+
     // Call this once to set up the subTLV
     build_sub_tlv(&eth->frm, htons(TYPE_FRAMEINDEX), 0);
 
