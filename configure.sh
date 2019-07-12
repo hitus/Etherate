@@ -7,4 +7,4 @@ libtoolize
 automake --add-missing
 
 autoconf && automake
-./configure $(CONFIGURE_FLAGS)
+./configure $CONFIGURE_FLAGS
