@@ -2075,7 +2075,7 @@ void sync_settings(struct etherate *eth)
                 // TX has set ACK mode frame count
                 } else if (ntohs(*eth->frm.rx_sub_tlv_type) == TYPE_ACKCOUNT) {
 
-                    eth->params.f_ack_timeout = (uint32_t)ntohll(*eth->frm.rx_sub_tlv_value);
+                    eth->params.f_ack_count = (uint32_t)ntohll(*eth->frm.rx_sub_tlv_value);
                     printf("ACK mode set to ACK every %" PRIu32 " frames\n", eth->params.f_ack_count);
 
                 // TX has requested MTU sweep test
